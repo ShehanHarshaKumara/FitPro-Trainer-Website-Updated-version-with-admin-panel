@@ -1,0 +1,79 @@
+
+> @figma/my-make-file@0.0.1 dev
+> vite --host 127.0.0.1
+
+
+  [32m[1mVITE[22m v6.3.5[39m  [2mready in [0m[1m426[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://127.0.0.1:[1m5173[22m/[39m
+[2m3:32:22 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\pages\HomePage.tsx, /src/styles/index.css[22m
+[2m3:33:23 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\pages\HomePage.tsx, /src/styles/index.css[22m
+[2m3:34:21 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\pages\HomePage.tsx, /src/styles/index.css[22m
+[2m3:37:45 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\pages\HomePage.tsx, /src/styles/index.css[22m
+[2m3:48:25 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\pages\HomePage.tsx, /src/styles/index.css[22m
+[2m3:48:36 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/styles/fonts.css[22m
+[2m3:48:36 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/styles/tailwind.css[22m
+[2m3:48:36 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css[22m
+[2m3:48:36 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/styles/theme.css[22m
+[2m3:48:46 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\pages\HomePage.tsx[22m
+[2m3:50:00 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\pages\HomePage.tsx[22m
+[2m3:50:23 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/styles/fonts.css[22m
+[2m3:50:23 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css[22m
+[2m3:50:23 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/styles/theme.css[22m
+[2m3:50:23 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/styles/tailwind.css[22m
+[2m3:50:48 PM[22m [36m[1m[vite][22m[39m changed tsconfig file detected: C:/my project/Gym-Trainer-Website-Client-Management-System/tsconfig.json - Clearing cache and forcing full-reload to ensure TypeScript is compiled with updated config values.
+[2m3:53:08 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\pages\HomePage.tsx, /src/styles/index.css[22m
+[2m3:53:50 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\pages\HomePage.tsx, /src/styles/index.css[22m
+[2m3:55:26 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\pages\HomePage.tsx, /src/styles/index.css[22m
+[2m3:55:38 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\pages\HomePage.tsx, /src/styles/index.css[22m
+[2m3:56:37 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\pages\HomePage.tsx, /src/styles/index.css[22m
+[2m3:57:33 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\pages\HomePage.tsx, /src/styles/index.css[22m
+[2m3:58:27 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\pages\HomePage.tsx, /src/styles/index.css[22m
+[2m3:59:09 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\pages\HomePage.tsx, /src/styles/index.css[22m
+[2m4:00:54 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\pages\HomePage.tsx, /src/styles/index.css[22m
+[2m4:01:01 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\pages\HomePage.tsx, /src/styles/index.css[22m
+[2m4:01:16 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\pages\HomePage.tsx, /src/styles/index.css[22m
+[2m4:01:25 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\pages\HomePage.tsx, /src/styles/index.css[22m
+[2m4:01:35 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\pages\HomePage.tsx, /src/styles/index.css[22m
+[2m4:02:51 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\pages\HomePage.tsx, /src/styles/index.css[22m
+[2m4:06:20 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\pages\HomePage.tsx, /src/styles/index.css[22m
+[2m4:08:38 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\pages\HomePage.tsx, /src/styles/index.css[22m
+[2m4:10:32 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\pages\HomePage.tsx, /src/styles/index.css[22m
+[2m4:11:59 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\pages\HomePage.tsx, /src/styles/index.css[22m
+[2m4:12:35 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\pages\HomePage.tsx, /src/styles/index.css[22m
+[2m4:14:43 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\components\Navigation.tsx, /src/styles/index.css[22m
+[2m4:18:22 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\components\Navigation.tsx, /src/styles/index.css[22m
+[2m4:20:39 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\components\RootLayout.tsx, /src/styles/index.css[22m
+[2m4:20:52 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\components\RootLayout.tsx, /src/styles/index.css[22m
+[2m4:21:03 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css[22m
+[2m4:23:35 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\pages\HomePage.tsx, /src/styles/index.css[22m
+[2m4:25:45 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\pages\HomePage.tsx, /src/styles/index.css[22m
+[2m4:27:54 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css[22m
+[2m4:28:04 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\pages\AboutPage.tsx, /src/styles/index.css[22m
+[2m4:28:04 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\pages\ServicesPage.tsx, /src/styles/index.css[22m
+[2m4:28:04 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\pages\ProgramsPage.tsx, /src/styles/index.css[22m
+[2m4:28:04 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\pages\GalleryPage.tsx, /src/styles/index.css[22m
+[2m4:28:04 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\pages\TestimonialsPage.tsx, /src/styles/index.css[22m
+[2m4:28:04 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\pages\PricingPage.tsx, /src/styles/index.css[22m
+[2m4:28:04 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\pages\ContactPage.tsx, /src/styles/index.css[22m
+[2m4:36:13 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mGym-Trainer/index.html[22m
+[2m4:41:17 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\pages\GalleryPage.tsx, /src/styles/index.css[22m
+[2m4:44:26 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\pages\GalleryPage.tsx, /src/styles/index.css[22m
+[2m4:45:08 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\pages\GalleryPage.tsx, /src/styles/index.css[22m
+[2m4:46:30 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\pages\GalleryPage.tsx, /src/styles/index.css[22m
+[2m4:49:35 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\pages\GalleryPage.tsx, /src/styles/index.css[22m
+[2m4:49:54 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css[22m
+[2m4:53:59 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\my project\Gym-Trainer-Website-Client-Management-System\src\app\components\Navigation.tsx, /src/styles/index.css[22m
+[2m4:58:04 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mFitPro-Trainer/dist/index.html[22m
+[2m4:58:07 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mFitPro-Trainer/index.html[22m
+[2m4:58:07 PM[22m [36m[1m[vite][22m[39m changed tsconfig file detected: C:/my project/Gym-Trainer-Website-Client-Management-System/FitPro-Trainer/tsconfig.json - Clearing cache and forcing full-reload to ensure TypeScript is compiled with updated config values.
+[2m4:58:07 PM[22m [36m[1m[vite][22m[39m changed tsconfig file detected: C:/my project/Gym-Trainer-Website-Client-Management-System/tsconfig.json - Clearing cache and forcing full-reload to ensure TypeScript is compiled with updated config values.
+[2m4:58:07 PM[22m [36m[1m[vite][22m[39m [32mvite.config.ts changed, restarting server...[39m
+[2m4:58:07 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mindex.html[22m
+[2m4:58:07 PM[22m [36m[1m[vite][22m[39m server restarted.
+[2m4:58:24 PM[22m [36m[1m[vite][22m[39m changed tsconfig file detected: C:/my project/Gym-Trainer-Website-Client-Management-System/FitPro-Trainer/tsconfig.json - Clearing cache and forcing full-reload to ensure TypeScript is compiled with updated config values.
+[2m4:58:24 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mFitPro-Trainer/index.html[22m
+[2m4:59:57 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mindex.html[22m
+[2m4:59:57 PM[22m [36m[1m[vite][22m[39m changed tsconfig file detected: C:/my project/Gym-Trainer-Website-Client-Management-System/tsconfig.json - Clearing cache and forcing full-reload to ensure TypeScript is compiled with updated config values.
+[2m4:59:59 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mindex.html[22m
+[2m4:59:59 PM[22m [36m[1m[vite][22m[39m changed tsconfig file detected: C:/my project/Gym-Trainer-Website-Client-Management-System/tsconfig.json - Clearing cache and forcing full-reload to ensure TypeScript is compiled with updated config values.

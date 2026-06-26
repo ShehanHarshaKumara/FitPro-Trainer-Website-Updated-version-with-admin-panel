@@ -1,0 +1,13 @@
+[2m3:48:36 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to load url /src/styles/index.css (resolved id: C:/my project/Gym-Trainer-Website-Client-Management-System/src/styles/index.css) in C:/my project/Gym-Trainer-Website-Client-Management-System/src/main.tsx. Does the file exist?
+Error: The following dependencies are imported but could not be resolved:
+
+  [36mreact-dom/client[39m [37m[2m(imported by C:/my project/Gym-Trainer-Website-Client-Management-System/src/main.tsx)[22m[39m
+  [36mreact-router[39m [37m[2m(imported by C:/my project/Gym-Trainer-Website-Client-Management-System/src/app/components/Footer.tsx)[22m[39m
+  [36mreact[39m [37m[2m(imported by C:/my project/Gym-Trainer-Website-Client-Management-System/src/app/components/Navigation.tsx)[22m[39m
+  [36mlucide-react[39m [37m[2m(imported by C:/my project/Gym-Trainer-Website-Client-Management-System/src/app/components/Footer.tsx)[22m[39m
+  [36mmotion/react[39m [37m[2m(imported by C:/my project/Gym-Trainer-Website-Client-Management-System/src/app/components/Navigation.tsx)[22m[39m
+
+Are they installed?
+    at file:///C:/my%20project/Gym-Trainer-Website-Client-Management-System/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:14849:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///C:/my%20project/Gym-Trainer-Website-Client-Management-System/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:46985:28
