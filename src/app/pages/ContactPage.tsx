@@ -3,11 +3,11 @@ import { motion } from "motion/react";
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "react-router";
 import Swal from "sweetalert2";
-import { submitFeedback } from "../lib/api";
+import { getApi, submitFeedback, type ApiPackage } from "../lib/api";
 
 const CONTACT_EMAIL = "manuladamith@gmail.com";
 
-const packageOptions = [
+const fallbackPackageOptions = [
   {
     id: "legacy",
     title: "LEGACY",
@@ -150,6 +150,7 @@ function TikTokBrandIcon({ className }: { className?: string }) {
 
 export function ContactPage() {
   const [searchParams] = useSearchParams();
+  const [managedPackages, setManagedPackages] = useState<ApiPackage[] | null>(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -159,10 +160,22 @@ export function ContactPage() {
   const [selectedPackageId, setSelectedPackageId] = useState(searchParams.get("package") || "");
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const packageOptions = useMemo(
+    () => managedPackages === null
+      ? fallbackPackageOptions
+      : managedPackages.map(({ slug, title, duration, price, description }) => ({ id: slug, title, duration, price, description })),
+    [managedPackages],
+  );
   const selectedPackage = useMemo(
     () => packageOptions.find((packageItem) => packageItem.id === selectedPackageId),
-    [selectedPackageId],
+    [packageOptions, selectedPackageId],
   );
+
+  useEffect(() => {
+    let active = true;
+    getApi<ApiPackage[]>("packages").then((items) => { if (active) setManagedPackages(items); }).catch(() => undefined);
+    return () => { active = false; };
+  }, []);
 
   useEffect(() => {
     const packageId = searchParams.get("package") || "";

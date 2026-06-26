@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 import { assetUrl, getApi, type ApiService } from "../lib/api";
 
 export function ServicesPage() {
-  const [managedServices, setManagedServices] = useState<ApiService[]>([]);
+  const [managedServices, setManagedServices] = useState<ApiService[] | null>(null);
+  const [loadError, setLoadError] = useState(false);
   const services = [
     {
       icon: Dumbbell,
@@ -61,9 +62,15 @@ export function ServicesPage() {
       image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080",
     },
   ];
-  useEffect(() => { getApi<ApiService[]>("services").then(setManagedServices).catch(() => undefined); }, []);
+  useEffect(() => {
+    let active = true;
+    getApi<ApiService[]>("services")
+      .then((items) => { if (active) setManagedServices(items); })
+      .catch(() => { if (active) setLoadError(true); });
+    return () => { active = false; };
+  }, []);
   const iconByName = { dumbbell: Dumbbell, weight: Weight, heart: Heart, trending: TrendingUp, apple: Apple, monitor: Monitor };
-  const displayServices = managedServices.length ? managedServices.map((service) => ({ ...service, icon: iconByName[service.icon as keyof typeof iconByName] || Dumbbell, image: assetUrl(service.image) || services.find((item) => item.title === service.title)?.image || services[0].image })) : services;
+  const displayServices = managedServices === null ? services : managedServices.map((service) => ({ ...service, icon: iconByName[service.icon as keyof typeof iconByName] || Dumbbell, image: assetUrl(service.image) || services.find((item) => item.title === service.title)?.image || services[0].image }));
 
   return (
     <div className="min-h-screen pt-20">
@@ -85,9 +92,11 @@ export function ServicesPage() {
       <section className="py-20 theme-section-red">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-16">
+            {loadError && <p className="rounded-lg border border-amber-400/30 bg-amber-400/10 p-4 text-center text-amber-100">Live service updates are temporarily unavailable. Showing the standard services.</p>}
+            {!displayServices.length && <p className="rounded-lg border border-white/10 bg-white/5 p-8 text-center text-white/70">Services are being updated. Please check back soon.</p>}
             {displayServices.map((service, index) => (
               <motion.div
-                key={index}
+                key={service.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}

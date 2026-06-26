@@ -1,7 +1,7 @@
 import { FormEvent, useEffect, useMemo, useState } from "react";
 import { Quote, Send, Star } from "lucide-react";
 import { motion } from "motion/react";
-import { getApi } from "../lib/api";
+import { getApi, postApi } from "../lib/api";
 
 type Testimonial = {
   id: string;
@@ -129,24 +129,13 @@ export function TestimonialsPage() {
     setStatusMessage("");
 
     try {
-      const response = await fetch("/api/testimonials", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: trimmedName,
-          role: trimmedRole,
-          rating: formData.rating,
-          text: trimmedText,
-          result: trimmedResult,
-        }),
+      const newFeedback = await postApi<Testimonial>("testimonials", {
+        name: trimmedName,
+        role: trimmedRole,
+        rating: formData.rating,
+        text: trimmedText,
+        result: trimmedResult,
       });
-      const newFeedback = (await response.json()) as Testimonial | { error?: string };
-
-      if (!response.ok || "error" in newFeedback) {
-        throw new Error("error" in newFeedback ? newFeedback.error : "Unable to save feedback.");
-      }
 
       setDatabaseFeedback((currentFeedback) => [newFeedback, ...currentFeedback]);
       setFormData({ name: "", role: "", rating: 5, text: "", result: "" });

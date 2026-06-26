@@ -53,6 +53,7 @@ return [
     */
 
     'url' => env('APP_URL', 'http://localhost'),
+    'website_url' => env('FITPRO_WEBSITE_URL', 'http://localhost:5173'),
 
     /*
     |--------------------------------------------------------------------------

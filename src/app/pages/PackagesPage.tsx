@@ -5,7 +5,8 @@ import { useEffect, useState } from "react";
 import { assetUrl, getApi, type ApiPackage } from "../lib/api";
 
 export function PackagesPage() {
-  const [managedPackages, setManagedPackages] = useState<ApiPackage[]>([]);
+  const [managedPackages, setManagedPackages] = useState<ApiPackage[] | null>(null);
+  const [loadError, setLoadError] = useState(false);
   const packages = [
     {
       id: "legacy",
@@ -124,8 +125,14 @@ export function PackagesPage() {
       imagePosition: "object-center",
     },
   ];
-  useEffect(() => { getApi<ApiPackage[]>("packages").then(setManagedPackages).catch(() => undefined); }, []);
-  const displayPackages = managedPackages.length ? managedPackages.map((item, index) => ({ ...item, id: item.slug, level: item.price, image: assetUrl(item.image) || packages[index % packages.length].image, icon: [TrendingUp, Dumbbell, Target, Clock, Users, Home][index % 6] })) : packages;
+  useEffect(() => {
+    let active = true;
+    getApi<ApiPackage[]>("packages")
+      .then((items) => { if (active) setManagedPackages(items); })
+      .catch(() => { if (active) setLoadError(true); });
+    return () => { active = false; };
+  }, []);
+  const displayPackages = managedPackages === null ? packages : managedPackages.map((item, index) => ({ ...item, id: item.slug, level: item.price, image: assetUrl(item.image) || packages[index % packages.length].image, imagePosition: "object-center", icon: [TrendingUp, Dumbbell, Target, Clock, Users, Home][index % 6] }));
 
   return (
     <div className="min-h-screen pt-20">
@@ -147,9 +154,11 @@ export function PackagesPage() {
       <section className="py-20 theme-section-red">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {loadError && <p className="lg:col-span-2 rounded-lg border border-amber-400/30 bg-amber-400/10 p-4 text-center text-amber-100">Live package updates are temporarily unavailable. Showing the standard packages.</p>}
+            {!displayPackages.length && <p className="lg:col-span-2 rounded-lg border border-white/10 bg-white/5 p-8 text-center text-white/70">Packages are being updated. Please check back soon.</p>}
             {displayPackages.map((packageItem, index) => (
               <motion.div
-                key={index}
+                key={packageItem.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
