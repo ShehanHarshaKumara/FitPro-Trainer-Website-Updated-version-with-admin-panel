@@ -2,7 +2,7 @@
 
 ## Goal
 
-Redesign only the Laravel admin feedback page as a responsive smart inbox. The page must make it faster to find, review, update, resolve, and publish feedback while preserving the existing admin shell, authentication, data model, and update route.
+Redesign only the Laravel admin feedback page as a responsive management table. The page must make it faster to find, view, edit, resolve, publish, and delete feedback while preserving the existing admin shell, authentication, and data model.
 
 ## Scope
 
@@ -15,19 +15,25 @@ The page uses the existing dark red admin theme and contains four sections:
 1. A header titled **Feedback Management** with a short explanation of the inbox workflow.
 2. Four summary cards showing Total, New, Testimonials, and Published counts. Counts describe the complete feedback collection and do not change when filters are active.
 3. A GET filter bar containing a text search, type filter, status filter, Apply action, and Reset action. Active filters remain populated after submission.
-4. A responsive feedback inbox. Each item has a compact summary and an expandable management form.
+4. A responsive feedback table with one row per record and dedicated View, Edit, and Delete actions.
 
-## Inbox Items
+## Feedback Table
 
-The collapsed summary shows the sender name and email, message preview, feedback type, received date, current status, rating when present, and publication state for testimonials. Statuses use distinct, accessible text-and-color badges rather than color alone.
+Each table row shows the sender, contact email, feedback type, message preview, received date, current status, rating when present, and publication state for testimonials. Statuses use distinct, accessible text-and-color badges rather than color alone.
 
-Expanding an item reveals the existing management fields:
+The Actions column contains three clearly labeled controls:
+
+- **View** opens a read-only modal containing all available details for the record.
+- **Edit** opens a modal containing the management form.
+- **Delete** opens a confirmation dialog and deletes only after explicit confirmation.
+
+The edit modal contains the existing management fields:
 
 - Testimonials: program or goal, rating, result, testimonial message, and website visibility.
 - Enquiries: the submitted message as read-only content.
 - All types: workflow status and private admin notes.
 
-Each item saves independently through the existing `admin.feedback.update` route. No bulk actions, deletion, pagination, or new feedback fields are introduced.
+Each item saves independently through the existing `admin.feedback.update` route. A dedicated authenticated DELETE route removes a feedback record and returns to the filtered list with a success message. No bulk actions, pagination, or new feedback fields are introduced.
 
 ## Filtering and Search
 
@@ -43,7 +49,7 @@ The controller passes the filtered collection, unfiltered summary counts, and no
 
 ## States and Feedback
 
-The existing success flash message remains visible after an update. Laravel validation failures return to the page with the relevant validation messages and old input. The page distinguishes these empty states:
+Success flash messages remain visible after updates and deletions. Laravel validation failures return to the page with the relevant validation messages and old input. The edit modal for the submitted record reopens when validation fails. The page distinguishes these empty states:
 
 - No feedback exists: invite the administrator to check again after visitors submit messages.
 - Filters return no matches: explain that no results match and provide a Reset filters action.
@@ -52,7 +58,7 @@ Forms keep CSRF protection and method spoofing. All rendered user content contin
 
 ## Responsive and Accessible Behavior
 
-Desktop uses dense inbox rows with an expandable detail area. Tablet and mobile stack metadata and actions, preserve full-width form controls, and avoid horizontal scrolling. Native `<details>` and `<summary>` provide keyboard-accessible expansion without a JavaScript dependency. Inputs have explicit labels, filter controls have meaningful names, and focus styles remain visible.
+Desktop uses a dense table. On smaller screens, the table sits in a labeled horizontal scroll region while modal content and actions stack vertically. View and Edit use accessible dialogs with a visible title, close control, Escape-key handling, focus management, and backdrop dismissal. The Delete action uses a separate confirmation dialog identifying the selected sender. Inputs have explicit labels, filter controls have meaningful names, and focus styles remain visible.
 
 ## Testing
 
@@ -64,10 +70,12 @@ Laravel feature tests will verify:
 - Unsupported filters do not break the page.
 - Updating status, notes, testimonial fields, rating, and publication state persists valid values.
 - Invalid update data is rejected with validation errors.
+- Deleting a feedback record removes it and returns a success message.
+- View, Edit, and Delete controls are rendered for each record.
 - An unauthenticated visitor cannot access the page.
 
 Implementation follows test-first development: add a focused failing feature test, confirm the expected failure, implement the smallest change, then rerun the focused and full relevant test suites.
 
 ## Acceptance Criteria
 
-The finished page visually matches the existing admin theme, provides accurate unfiltered counts, supports combined search/type/status filtering, lets each item be managed independently, clearly handles success/errors/empty results, and remains usable on mobile. Existing feedback records and public-site behavior remain compatible.
+The finished page visually matches the existing admin theme, provides accurate unfiltered counts, supports combined search/type/status filtering, displays feedback in a details table, and provides working View, Edit, and confirmed Delete actions for every row. It clearly handles success, errors, and empty results and remains usable on mobile. Existing feedback records and public-site behavior remain compatible.
